@@ -20,13 +20,9 @@ def main():
         opcion = input("Select one of the following options: ")
         
         if opcion == "1":
-            title = input("Book Title: ")
-            author = input("Author Name: ")
-            category = input("Book Category: ")
-            price = input("Book Price: ")
-            stock = input("Stock:  ")
-            register_product(title,author,category, price, stock)
-            print
+            register_product()
+            
+            
 
         elif opcion == "2":
             title = input("Write the title of the book: ")

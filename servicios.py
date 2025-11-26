@@ -3,13 +3,24 @@ inventory = [{'title': 'el principito', 'author': 'Stiven', 'category': 'fabula'
              {'title': 'don quijote', 'author': 'Stiven', 'category':'clasico', 'price': 4000, 'stock': 30,},
              {'title': '1983', 'author': 'Carlos', 'category':'novela', 'price' : 1000, 'stock': 20,},
              {'title': 'python', 'author': 'Juan', 'category': 'programacion', 'price': 2500, 'stock': 100,},
-             {'title': 'poemas', 'author': 'Stiven', 'category': 'fabula', 'poemas clasicos''price' :800, 'stock': 15,},
+             {'title': 'poemas', 'author': 'Stiven', 'category': 'fabula','price' :800, 'stock': 15,},
              ]
 
             
 
 
 def register_product(title, author, category,price, stock):
+
+    title = input("Book Title: ")
+    author = input("Author Name: ")
+    category = input("Book Category: ")
+    price = input("Book Price: ")
+    stock = input("Stock:  ")
+    register_product(title, author, category, price, stock)
+
+    inventory.append(book)
+
+
     book = {
         'title': title,
         'author': author,
@@ -17,7 +28,8 @@ def register_product(title, author, category,price, stock):
         'price': price,
         'stock': stock
     }
-    inventory.append(book)
+
+    
     print (f"Book: '{title}' registered successfully.")
 
 # funtion to consult books
