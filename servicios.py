@@ -110,6 +110,23 @@ def register_sales(inventory):
     print(f"Sale registered successfully for '{book_title_sale}'.") 
     print(f"Final Price after discount: ${final_price}")
 
+def mostrar_ventas():
+    if not sales:
+        print("No hay ventas registradas.")
+        return  
+    print("\n----- LISTA DE VENTAS -----")
+    for venta in sales:
+        print(f"""
+Cliente: {venta['customer_name']}
+Tipo de Cliente: {venta['type_client']}
+Libro vendido: {venta['book_title_sale']}
+Cantidad: {venta['quantity']}
+Fecha y hora: {venta['time']}
+Descuento: {venta['descuento']}
+Precio final: {venta['final_price']}
+------------------------------""")
+    
+
 
 from collections import defaultdict
 

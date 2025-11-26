@@ -1,4 +1,4 @@
-from servicios import (register_product, consult_book,update_product,delete_product, register_sales, top_3_sales, sales_author,inventory)
+from servicios import (register_product, consult_book,update_product,delete_product, register_sales, top_3_sales, sales_author,mostrar_ventas, inventory)
 
 
 def main():
@@ -13,6 +13,7 @@ def main():
         print("5. Register Sale")
         print("6. Report: Top 3 of Sale")
         print("7. Report: Sale by Author")
+        print ("8. Report: View sales")
         print("0. Salir")
         print("_____________________")
 
@@ -51,6 +52,9 @@ def main():
 
         elif opcion == "7":
             sales_author()
+            
+        elif opcion == "8":
+            mostrar_ventas()    
 
         elif opcion == "0":
              print("Exit, Thanks")
