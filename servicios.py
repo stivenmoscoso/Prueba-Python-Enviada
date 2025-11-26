@@ -14,9 +14,11 @@ def register_product(title, author, category,price, stock):
     title = input("Book Title: ")
     author = input("Author Name: ")
     category = input("Book Category: ")
-    price = input("Book Price: ")
-    stock = input("Stock:  ")
-    register_product(title, author, category, price, stock)
+    try:
+        price = float(input("Book Price: "))
+        stock = input("Stock:  ")
+    except ValueError:
+        print("Ingresa Valores validos para el precio y el stock")
 
     inventory.append(book)
 
